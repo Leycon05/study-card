@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Cadastro.css';
+import '../styles/Cadastro.css';
 import { Link } from 'react-router-dom';
 
 // ... dentro do return do Cadastro ...
