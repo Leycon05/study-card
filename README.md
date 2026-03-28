@@ -17,6 +17,10 @@ Siga os passos abaixo para configurar o ambiente em sua máquina local:
 Você precisa ter o **Node.js** instalado em seu computador.
 
 ### 2. Clonar o Repositório
-```bash
-git clone [https://github.com/rodrigotoshio/prodes5.git](https://github.com/rodrigotoshio/prodes5.git)
+git clone https://github.com/rodrigotoshio/prodes5.git
+
+### 3. Abrir a pasta do projeto
 cd prodes5
+
+### 4. Rodar o Projeto 
+npm run dev
