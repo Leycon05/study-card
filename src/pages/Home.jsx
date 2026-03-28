@@ -1,7 +1,6 @@
 import { FiLogOut } from "react-icons/fi";
 import "../styles/home.css";
-        <link href="https://fonts.googleapis.com/css2?family=Revalia&display=swap" rel="stylesheet"></link>
-
+import { FiPlus } from "react-icons/fi";
 function Home() {
   const nome = "Leycon";
 
@@ -25,11 +24,9 @@ function Home() {
         </div>
 
         <div className="name-box">
-          <h2>({nome})</h2>
+          <h2>{nome}</h2>
         </div>
-
-        <button className="btn-novo">novo +</button>
-      </div>
+<button className="btn-novo"> novo <FiPlus size={44}/></button></div>
 
       {/* TAREFAS */}
       <h3 className="titulo">minhas tarefas</h3>
