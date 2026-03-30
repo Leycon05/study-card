@@ -144,7 +144,63 @@ body {
   width: 100%;
   margin-left: 100px;
 }
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 2000;
+}
+
+.modal {
+  background: linear-gradient(to bottom, #001867, #000c3f);
+  padding: 40px;
+  border-radius: 40px;
+  width: 400px;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.fechar {
+  align-self: flex-end;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.modal input {
+  padding: 15px;
+  border-radius: 50px;
+  border: none;
+}
+
+.btn-criar {
+  margin-top: 20px;
+  background: white;
+  color: #001867;
+  border: none;
+  padding: 15px;
+  border-radius: 50px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.erro {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: 5px;
+}
 /* CARDS */
 .cards {
   display: grid; /* 🔥 melhor que flex aqui */
@@ -169,7 +225,152 @@ height: 200px;
 
   transition: 0.2s;
 }
+.modal-overlay {
+  animation: fadeIn 0.3s ease;
+}
 
+.modal {
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* FUNDO ESCURO */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 2000;
+
+  animation: fadeIn 0.3s ease;
+}
+
+/* CAIXA DO MODAL */
+.modal {
+  background: linear-gradient(to bottom, #001867, #000c3f);
+  width: 420px;
+
+  padding: 40px;
+  border-radius: 40px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  color: white;
+
+  animation: slideUp 0.3s ease;
+}
+
+/* BOTÃO FECHAR */
+.fechar {
+  align-self: flex-end;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.fechar:hover {
+  opacity: 0.7;
+}
+
+/* TÍTULO */
+.modal h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: 'Righteous', sans-serif;
+}
+
+/* LABEL */
+.modal label {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* INPUTS */
+.modal input {
+  padding: 14px 18px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+
+  font-size: 14px;
+}
+
+/* INPUT FOCUS */
+.modal input:focus {
+  box-shadow: 0 0 0 2px #0095ff;
+}
+
+/* ERRO */
+.erro {
+  color: #ff4d4d;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* BOTÃO CRIAR/SALVAR */
+.btn-criar {
+  margin-top: 15px;
+
+  background: white;
+  color: #001867;
+
+  border: none;
+  padding: 14px;
+
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-criar:hover {
+  background: #0095ff;
+  color: white;
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 /* hover bonito */
 .card:hover {
   transform: translateY(-5px);
@@ -282,4 +483,73 @@ height: 200px;
 
 .card.cancelado .info-item {
   color: red;
+}
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  background: #0a2c7d;
+  color: white;
+
+  padding: 15px 25px;
+  border-radius: 30px;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+
+  animation: slideIn 0.3s ease;
+}
+
+/* ANIMAÇÃO */
+@keyframes slideIn {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.logout-modal h2 {
+  font-size: 32px;
+  color: #0d2c7d;
+  margin-bottom: 40px;
+}
+
+.logout-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* botão cancelar */
+.logout-buttons .cancelar {
+  background: #0d2c7d;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  
+  
+  
+}
+
+/* botão sair */
+.logout-buttons .sair {
+  background: transparent;
+  color: red;
+  border: 2px solid #0d2c7d;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  
 }
