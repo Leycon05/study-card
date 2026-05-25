@@ -17,7 +17,7 @@ Siga os passos abaixo para configurar o ambiente em sua máquina local:
 Você precisa ter o **Node.js** instalado em seu computador.
 
 ### 2. Clonar o Repositório
-git clone https://github.com/rodrigotoshio/prodes5.git
+git clone https://github.com/isaacdev07/study-card-1
 
 ### 3. Abrir a pasta do projeto
 cd prodes5
